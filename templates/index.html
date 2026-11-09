@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Trang chủ – Ngập úng đô thị Quy Nhơn{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Ngập úng đô thị Quy Nhơn – Bình Định 2026</h1>
+  <p class="updated">Cập nhật: 09/11/2026</p>
+  <p class="lead">
+    Tháng 11/2026, bão số 9 và số 10 liên tiếp đổ bộ Quy Nhơn – Phù Cát gây mưa lớn kéo dài,
+    chỉ trong 2 giờ nhiều tuyến phố trung tâm như <strong>Nguyễn Thái Học, Tây Sơn, Lê Hồng Phong</strong>
+    đã ngập sâu 40–60cm. Hệ thống thoát nước quá tải khiến giao thông tê liệt, nhà dân và cửa hàng
+    ngập nước, sinh hoạt đảo lộn. Người dân cần biết điểm nào đang ngập, ngập bao sâu để chọn lối đi
+    an toàn và chủ động kê cao tài sản. Ứng dụng này cung cấp bản đồ 15 điểm ngập, dự báo độ ngập
+    theo lượng mưa và kênh báo ngập cộng đồng cho thành phố Quy Nhơn.
+  </p>
+  <a class="btn-primary" href="{{ url_for('flood_map') }}">Xem bản đồ ngập →</a>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h2>🗺️ Bản đồ 15 điểm ngập</h2>
+    <p>Bản đồ SVG trực quan các điểm ngập úng Quy Nhơn, màu sắc theo mức ngập: xanh – vàng – cam – đỏ.</p>
+    <a href="{{ url_for('flood_map') }}#ban-do">Mở bản đồ</a>
+  </div>
+  <div class="card">
+    <h2>🌧️ Dự báo theo lượng mưa</h2>
+    <p>Nhập lượng mưa (mm/2h), hệ thống tính độ ngập từng điểm qua công thức dòng chảy – thoát nước ở backend Flask.</p>
+    <a href="{{ url_for('flood_map') }}#du-bao">Dự báo ngay</a>
+  </div>
+  <div class="card">
+    <h2>📣 Báo ngập cộng đồng</h2>
+    <p>Gửi báo cáo điểm ngập bạn thấy, lưu trên trình duyệt (localStorage) và hiển thị trong danh sách cộng đồng.</p>
+    <a href="{{ url_for('flood_map') }}#bao-cao">Báo ngập</a>
+  </div>
+</section>
+
+<section class="notice">
+  <p>⚠️ <strong>Dữ liệu mô phỏng – cập nhật 09/11/2026.</strong> Không thay thế thông tin chính thức.
+    Khẩn cấp gọi cứu hộ 114 hoặc hotline HTK <a href="tel:0396241674">0396241674</a>.</p>
+</section>
+{% endblock %}

@@ -1,0 +1,156 @@
+/* Ngập úng đô thị Quy Nhơn 2026 – HTK · 0396241674 · Cập nhật 09/11/2026 */
+:root {
+  --primary: #0f4c81;
+  --primary-dark: #0a3559;
+  --bg: #f4f7fa;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --danger: #d92626;
+  --radius: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: var(--primary); }
+
+/* Navbar */
+.navbar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 8px; padding: 12px 20px; background: var(--primary); color: #fff;
+  position: sticky; top: 0; z-index: 10;
+}
+.brand { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.05rem; }
+.brand .year { background: #ffd34d; color: #333; border-radius: 6px; padding: 1px 7px; font-size: .8rem; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.nav-links a { color: #dbeafe; text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: .95rem; }
+.nav-links a:hover { background: rgba(255,255,255,.15); color: #fff; }
+.btn-hotline { background: #ffd34d !important; color: #1f2937 !important; font-weight: 700; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 40px; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #1668a8 100%);
+  color: #fff; border-radius: var(--radius); padding: 32px 26px; margin-bottom: 24px;
+}
+.hero h1 { font-size: 1.7rem; margin-bottom: 6px; }
+.hero .lead { margin: 12px 0 18px; max-width: 850px; }
+.hero .updated { color: #ffd34d; font-weight: 600; }
+.hero strong { color: #ffd34d; }
+
+.updated { color: var(--muted); font-size: .92rem; margin: 4px 0 10px; }
+.mock-tag { background: #fff3cd; color: #7a5c00; padding: 2px 8px; border-radius: 6px; font-size: .85rem; }
+
+.btn-primary {
+  display: inline-block; background: #ffd34d; color: #1f2937; font-weight: 700;
+  padding: 10px 20px; border-radius: 8px; border: none; text-decoration: none;
+  cursor: pointer; font-size: 1rem;
+}
+.btn-primary:hover { background: #ffc61a; }
+.btn-secondary {
+  background: #e5e7eb; color: #374151; border: none; padding: 10px 16px;
+  border-radius: 8px; cursor: pointer; font-size: .95rem;
+}
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.card {
+  background: var(--panel); border-radius: var(--radius); padding: 20px;
+  box-shadow: 0 1px 4px rgba(15,76,129,.12);
+}
+.card h2 { font-size: 1.1rem; margin-bottom: 8px; color: var(--primary); }
+.card p { font-size: .95rem; margin-bottom: 10px; }
+
+.notice {
+  background: #fdecec; border: 1px solid #f5b5b5; border-radius: var(--radius);
+  padding: 14px 18px; color: #7a1c1c;
+}
+
+/* Panels */
+.page-head h1 { color: var(--primary-dark); font-size: 1.6rem; }
+.panel {
+  background: var(--panel); border-radius: var(--radius); padding: 22px;
+  margin: 18px 0; box-shadow: 0 1px 4px rgba(15,76,129,.12);
+}
+.panel h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.25rem; }
+.panel h3 { margin: 16px 0 8px; color: var(--primary-dark); }
+.panel p { margin-bottom: 10px; }
+.panel ul { margin: 0 0 10px 22px; }
+code { background: #eef2f7; padding: 2px 6px; border-radius: 5px; font-size: .88rem; }
+
+/* Map */
+.legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 8px 0 14px; }
+.legend-item { display: inline-flex; align-items: center; gap: 6px; font-size: .9rem; }
+.legend-item i { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
+.map-wrap { overflow-x: auto; }
+#flood-svg { width: 100%; min-width: 320px; height: auto; background: #eef5ee; border-radius: 10px; }
+.svg-label { font-size: 16px; font-style: italic; }
+.svg-name { font-size: 12px; text-anchor: middle; fill: #374151; font-weight: 600; }
+.svg-depth { font-size: 11px; text-anchor: middle; fill: #fff; font-weight: 700; pointer-events: none; }
+.hint { color: var(--muted); font-size: .88rem; margin-top: 8px; }
+
+/* Forms */
+.inline-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 12px 0; }
+input, select, textarea {
+  padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px;
+  font-size: 1rem; font-family: inherit; background: #fff; color: var(--text);
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary); border-color: var(--primary); }
+#rain-mm { width: 120px; }
+.report-form { display: grid; gap: 12px; max-width: 560px; }
+.form-row { display: grid; gap: 4px; }
+.form-row label { font-weight: 600; font-size: .92rem; }
+.report-form button { justify-self: start; }
+.status { min-height: 1.4em; font-size: .95rem; font-weight: 600; }
+.status.ok { color: #1a7f42; }
+.status.err { color: var(--danger); }
+
+/* Table */
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 480px; }
+th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid #e5e7eb; font-size: .95rem; }
+th { background: #eef2f7; color: var(--primary-dark); }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 999px; color: #fff; font-size: .82rem; font-weight: 700; }
+
+/* Reports */
+.report-list { list-style: none; margin-left: 0 !important; display: grid; gap: 10px; }
+.report-list li {
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px;
+}
+.report-list .rp-meta { color: var(--muted); font-size: .82rem; }
+.report-list .rp-depth { color: var(--danger); font-weight: 700; }
+
+/* Contact + 404 */
+.contact-list { list-style: none; margin-left: 0 !important; }
+.contact-list li { padding: 4px 0; }
+.notfound { text-align: center; padding: 48px 22px; }
+.notfound h1 { color: var(--primary-dark); margin-bottom: 12px; }
+.notfound .btn-primary { margin-top: 16px; }
+
+/* Footer */
+.footer {
+  background: var(--primary-dark); color: #dbeafe; text-align: center;
+  padding: 20px 16px; font-size: .95rem;
+}
+.footer a { color: #ffd34d; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.footer-note { font-size: .82rem; color: #9db8d4; margin-top: 6px; }
+
+/* Responsive: 375px mobile + 1440px desktop */
+@media (max-width: 720px) {
+  .cards { grid-template-columns: 1fr; }
+  .hero { padding: 22px 18px; }
+  .hero h1 { font-size: 1.3rem; }
+  .navbar { padding: 10px 12px; }
+  .nav-links a { padding: 5px 7px; font-size: .85rem; }
+  .panel { padding: 16px 14px; }
+  main { padding: 14px 10px 30px; }
+}
+@media (min-width: 1200px) {
+  main { max-width: 1160px; }
+}

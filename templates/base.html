@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="HTK">
+  <meta name="last-updated" content="2026-11-09">
+  <meta name="description" content="{% block description %}Ngập úng đô thị Quy Nhơn – Bình Định mùa mưa lũ 2026{% endblock %}">
+  <title>{% block title %}Ngập úng đô thị Quy Nhơn 2026{% endblock %} · HTK</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="{{ url_for('home') }}">🌊 Ngập úng Quy Nhơn <span class="year">2026</span></a>
+  <nav class="nav-links">
+    <a href="{{ url_for('home') }}">Trang chủ</a>
+    <a href="{{ url_for('flood_map') }}">Bản đồ ngập</a>
+    <a href="{{ url_for('about') }}">Giới thiệu</a>
+    <a class="btn-hotline" href="tel:0396241674">📞 Liên hệ HTK</a>
+  </nav>
+</header>
+
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <p>© 2026 <a href="https://zalo.me/0396241674" target="_blank" rel="noopener">HTK</a> ·
+    Hotline/Zalo: <a href="tel:0396241674">0396241674</a> ·
+    Email: <a href="mailto:htk.contact@gmail.com">htk.contact@gmail.com</a></p>
+  <p class="footer-note">Ngập úng đô thị Quy Nhơn – mùa mưa lũ 2026 · Cập nhật: 09/11/2026</p>
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>

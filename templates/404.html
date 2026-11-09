@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}404 – Không tìm thấy trang{% endblock %}
+{% block content %}
+<section class="panel notfound">
+  <h1>404 – Không tìm thấy trang</h1>
+  <p>Trang bạn tìm không tồn tại hoặc đã bị di chuyển.</p>
+  <p>Cần hỗ trợ ngập úng Quy Nhơn? Gọi hotline HTK:
+    <a href="tel:0396241674"><strong>0396241674</strong></a> ·
+    Zalo: <a href="https://zalo.me/0396241674" target="_blank" rel="noopener">zalo.me/0396241674</a> ·
+    Email: <a href="mailto:htk.contact@gmail.com">htk.contact@gmail.com</a></p>
+  <a class="btn-primary" href="{{ url_for('home') }}">← Về trang chủ</a>
+</section>
+{% endblock %}
