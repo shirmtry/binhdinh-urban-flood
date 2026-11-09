@@ -48,7 +48,7 @@ venv/Scripts/python.exe api/index.py
 
 ## Deploy
 
-- Vercel (production): xem `deploy_url.txt` — link deploy sẽ được cập nhật tại đây sau khi triển khai.
+- Vercel (production): **https://binhdinh-urban-flood.vercel.app** (xem `deploy_url.txt`)
 - GitHub: https://github.com/shirmtry/binhdinh-urban-flood
 
 ## 📞 Liên hệ HTK – 0396241674 – 09/11/2026
